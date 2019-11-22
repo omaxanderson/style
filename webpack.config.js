@@ -6,12 +6,12 @@ module.exports = {
    entry: './src/index.scss',
    output: {
       path: path.join(__dirname, './dist/'),
-      //filename: '[name].css' // output js file name is identical to css file name
+      //filename: 'max.[name].css' // output js file name is identical to css file name
    },
    module: {
       rules: [
          {
-            test: /\.s[ac]ss$/i,
+            test: /\.scss$/i,
             exclude: path.join(__dirname, './node_modules'),
             use: [
                // Compiles Sass to CSS
@@ -31,6 +31,8 @@ module.exports = {
          ignoreOrder: false, // Enable to remove warnings about conflicting order
       }),
    ],
-
+   devServer: {
+      publicPath: './dist/',
+   },
 };
 

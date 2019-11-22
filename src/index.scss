@@ -1,5 +1,3 @@
-@import './another';
-
 body {
    margin: 0;
    padding: 0;
@@ -7,4 +5,8 @@ body {
 
 .left {
    float: left;
+}
+
+.right {
+   float: right;
 }

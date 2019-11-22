@@ -1,20 +1,23 @@
 {
-  "name": "style",
-  "version": "1.0.0",
+  "name": "@omaxwellanderson/style",
+  "version": "1.0.1",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "dist/main.css",
   "dependencies": {},
   "devDependencies": {
     "css-loader": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
+    "watch": "^1.0.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "webpack",
+    "start": "watch webpack src/ --interval=3"
   },
   "repository": {
     "type": "git",
